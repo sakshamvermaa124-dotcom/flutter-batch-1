@@ -50,3 +50,16 @@ Completed:
 - Code quality review
 - Documentation of test results
 - Preparation for mentor review
+
+- ## Week 2 Task 2 & 3 – State Management Implementation and Testing
+
+### Implemented
+- Provider package integration
+- ChangeNotifier-based CounterProvider
+- Increment, decrement, and reset actions
+- Automatic UI updates
+
+### Testing
+- Manual verification completed
+- Edge cases tested
+- Code review checklist completed
