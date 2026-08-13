@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'providers/counter_provider.dart';
+import 'services/api_service.dart';
 
 void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (_) => CounterProvider(),
-      child: const MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,62 +12,75 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'State Management Demo',
-      home: const CounterScreen(),
+      title: 'Navigation & API',
+      home: const HomeScreen(),
     );
   }
 }
 
-class CounterScreen extends StatelessWidget {
-  const CounterScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final counterProvider = Provider.of<CounterProvider>(context);
-
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Week 2 State Management'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text('Home')),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Counter Value',
-              style: TextStyle(fontSize: 20),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              '\${counterProvider.count}',
-              style: const TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: counterProvider.decrement,
-                  child: const Text('-'),
-                ),
-                const SizedBox(width: 16),
-                ElevatedButton(
-                  onPressed: counterProvider.increment,
-                  child: const Text('+'),
-                ),
-              ],
-            ),
-            const SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: counterProvider.reset,
-              child: const Text('Reset'),
-            ),
-          ],
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const PostsScreen()),
+            );
+          },
+          child: const Text('Open Posts'),
         ),
+      ),
+    );
+  }
+}
+
+class PostsScreen extends StatelessWidget {
+  const PostsScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('API Posts')),
+      body: FutureBuilder<List<dynamic>>(
+        future: ApiService.fetchPosts(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
+
+          if (snapshot.hasError) {
+            return Center(
+              child: Text('Error: \${snapshot.error}'),
+            );
+          }
+
+          final posts = snapshot.data ?? [];
+
+          if (posts.isEmpty) {
+            return const Center(child: Text('No posts found'));
+          }
+
+          return ListView.builder(
+            itemCount: posts.length.clamp(0, 10),
+            itemBuilder: (context, index) {
+              final post = posts[index];
+              return ListTile(
+                title: Text(post['title']),
+                subtitle: Text(
+                  post['body'],
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              );
+            },
+          );
+        },
       ),
     );
   }
