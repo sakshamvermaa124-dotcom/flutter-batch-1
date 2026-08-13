@@ -13,3 +13,20 @@
 - Manual testing completed
 - Code review completed
 - Documentation updated
+
+## Week 2 Task 1 – State Management Research
+
+### Summary
+State management in Flutter is used to manage and update UI data efficiently. I researched common approaches including:
+
+- setState
+- Provider
+- Riverpod
+- Bloc/Cubit
+- ChangeNotifier
+
+### Selected Approach
+**Provider with ChangeNotifier**
+
+### Reason
+Provider is beginner-friendly, lightweight, widely used in Flutter projects, and suitable for small to medium applications.
