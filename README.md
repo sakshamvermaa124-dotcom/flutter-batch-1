@@ -69,8 +69,21 @@ Completed:
 - Error handling
 - Empty state handling
 - Manual testing and code review documentation
-
 ### Testing
 - Manual verification completed
 - Edge cases tested
+- Code review checklist completed
+
+## Week 4 – Firebase Integration
+
+### Implemented
+- Firebase Core setup
+- Firebase Authentication setup
+- Anonymous sign-in example
+- Firebase service layer
+- Authentication status UI
+
+### Testing
+- Manual verification completed
+- Error handling verified
 - Code review checklist completed
