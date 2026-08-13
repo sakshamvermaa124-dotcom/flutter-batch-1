@@ -30,3 +30,18 @@ State management in Flutter is used to manage and update UI data efficiently. I 
 
 ### Reason
 Provider is beginner-friendly, lightweight, widely used in Flutter projects, and suitable for small to medium applications.
+
+## Week 1 Task 1
+dependency
+
+- 
+## Week 2 Task 2
+- Implemented Provider state management
+- Created CounterProvider using ChangeNotifier
+- Added increment, decrement, and reset actions
+- Prevented negative counter values
+
+## Week 2 Task 3
+- Manual verification completed
+- Code review checklist completed
+- Documentation updated for review
