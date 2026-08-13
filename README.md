@@ -30,4 +30,15 @@ The Flutter environment is configured successfully and ready for Dart Basics & U
 ### References
 - https://docs.flutter.dev/get-started/install
 - https://dart.dev/get-dart# flutter-template
-Template for flutter template
+
+## Week 1 Task 2 – Implement Dart Basics & UI
+
+### Implemented Features
+- Dart variables and functions
+- StatelessWidget
+- MaterialApp and Scaffold
+- AppBar
+- Text and Icon widgets
+- ElevatedButton
+- Column layout with spacing
+- Clean and modular Flutter UI
