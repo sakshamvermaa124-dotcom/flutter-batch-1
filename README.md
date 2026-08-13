@@ -59,6 +59,17 @@ Completed:
 - Increment, decrement, and reset actions
 - Automatic UI updates
 
+- ## Week 3 – Navigation & API
+
+### Implemented
+- Screen navigation using Navigator
+- API integration using http package
+- Home and Posts screens
+- Loading indicator
+- Error handling
+- Empty state handling
+- Manual testing and code review documentation
+
 ### Testing
 - Manual verification completed
 - Edge cases tested

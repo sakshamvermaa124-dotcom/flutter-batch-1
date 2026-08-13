@@ -45,3 +45,26 @@ dependency
 - Manual verification completed
 - Code review checklist completed
 - Documentation updated for review
+
+- ## Week 3 Task 1 – Navigation & API Research
+
+- Researched Navigator and route navigation
+- Researched HTTP API integration
+- Added http dependency
+- Prepared project for API development
+
+## Week 3 Task 2 – Navigation & API Implementation
+
+- Implemented HomeScreen
+- Implemented PostsScreen
+- Added navigation between screens
+- Integrated JSONPlaceholder API
+- Added loading, error, and empty state handling
+
+## Week 3 Task 3 – Testing & Code Review
+
+- Manual verification completed
+- Navigation tested
+- API response tested
+- Error handling reviewed
+- Documentation updated
