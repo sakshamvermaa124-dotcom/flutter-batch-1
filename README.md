@@ -42,3 +42,11 @@ The Flutter environment is configured successfully and ready for Dart Basics & U
 - ElevatedButton
 - Column layout with spacing
 - Clean and modular Flutter UI
+
+## Week 1 Task 3 – Testing & Code Review
+
+Completed:
+- Manual verification of UI
+- Code quality review
+- Documentation of test results
+- Preparation for mentor review
