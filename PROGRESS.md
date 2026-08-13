@@ -68,3 +68,24 @@ dependency
 - API response tested
 - Error handling reviewed
 - Documentation updated
+
+## Week 4 Task 1 – Firebase Research & Setup
+
+- Researched Firebase Core and Firebase Authentication
+- Added firebase_core dependency
+- Added firebase_auth dependency
+- Prepared project for Firebase integration
+
+## Week 4 Task 2 – Firebase Implementation
+
+- Implemented FirebaseService
+- Added anonymous sign-in functionality
+- Added Firebase initialization in main.dart
+- Added authentication status UI
+
+## Week 4 Task 3 – Testing & Code Review
+
+- Manual verification documented
+- Error handling reviewed
+- Firebase service reviewed
+- Documentation updated
